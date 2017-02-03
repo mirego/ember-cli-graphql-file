@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - '6.9.0'
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.npm
+    - $HOME/.cache
+
+matrix:
+  fast_finish: true
+
+before_install:
+  - npm install -g phantomjs-prebuilt
+
+install:
+  - npm install
