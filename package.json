@@ -1,5 +1,5 @@
 {
-  "name": "ember-cli-graphql-file",
+  "name": "@hortau/ember-cli-graphql-file",
   "version": "1.0.0",
   "description": "An addon to precompile your `.graphql` files with `graphql-tag` and turn them into importable modules.",
   "keywords": [
@@ -7,7 +7,7 @@
     "graphql",
     "graphql-tag"
   ],
-  "repository": "https://github.com/mirego/ember-cli-graphql-file",
+  "repository": "https://github.com/Hortau/ember-cli-graphql-file",
   "license": "BSD-3-Clause",
   "author": "Charles Demers <cdemers@mirego.com>",
   "directories": {
