@@ -7,30 +7,28 @@ const gql = require('graphql-tag');
 
 const ADDON_NAME = 'ember-cli-graphql-file';
 
-function GraphQLCompiler(inputNode) {
-  Filter.call(this, inputNode, {
-    name: ADDON_NAME
-  });
+class GraphQLCompiler extends Filter {
+  constructor(inputNode) {
+    super(inputNode, {name: ADDON_NAME});
+    this.extensions = ['graphql'];
+    this.targetExtension = 'js';
+  }
+
+  processString(content) {
+    return `export default ${JSON.stringify(gql`${content}`)};`;
+  }
 }
-
-GraphQLCompiler.prototype = Object.create(Filter.prototype);
-GraphQLCompiler.prototype.constructor = GraphQLCompiler;
-GraphQLCompiler.prototype.extensions = ['graphql'];
-GraphQLCompiler.prototype.targetExtension = 'js';
-
-GraphQLCompiler.prototype.processString = function(content) {
-  return `export default ${JSON.stringify(gql`${content}`)};`;
-};
 
 module.exports = {
   name: ADDON_NAME,
 
-  setupPreprocessorRegistry: function(type, registry) {
+  // eslint-disable-next-line no-unused-vars
+  setupPreprocessorRegistry(type, registry) {
     registry.add('js', {
       name: ADDON_NAME,
       ext: 'graphql',
 
-      toTree: function(tree) {
+      toTree(tree) {
         return new GraphQLCompiler(tree);
       }
     });
