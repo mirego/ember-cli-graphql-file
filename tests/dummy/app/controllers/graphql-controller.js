@@ -1,9 +1,8 @@
-import Ember from 'ember';
+import {computed} from '@ember/object';
+import Controller from '@ember/controller';
 import query from '../graphql/query';
 
-const {computed} = Ember;
-
-export default Ember.Controller.extend({
+export default Controller.extend({
   query: computed(() => {
     return query;
   })
