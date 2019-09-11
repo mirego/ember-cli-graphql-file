@@ -67,7 +67,7 @@ module.exports = {
     'object-shorthand': 2,
     'operator-linebreak': [2, 'before'],
     'padded-blocks': 0,
-    'prefer-arrow-callback': 2,
+    'prefer-arrow-callback': 0,
     'prefer-const': 2,
     'prefer-template': 2,
     'quotes': [2, 'single', 'avoid-escape'],
