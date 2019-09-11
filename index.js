@@ -5,7 +5,7 @@
 const Filter = require('broccoli-persistent-filter');
 const gql = require('graphql-tag');
 
-const ADDON_NAME = 'ember-cli-graphql-file';
+const ADDON_NAME = '@hortau/ember-cli-graphql-file';
 
 class GraphQLCompiler extends Filter {
   constructor(inputNode) {

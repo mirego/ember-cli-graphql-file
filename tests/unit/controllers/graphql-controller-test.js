@@ -1,9 +1,11 @@
-import {moduleFor, test} from 'ember-qunit';
+import {module, test, setupTest} from 'ember-qunit';
 
-moduleFor('controller:graphql-controller', 'Unit | Controller | graphql-controller');
+module('Unit | Controller | graphql-controller', (hooks) => {
+  setupTest(hooks);
 
-test('it can import a .graphql file', function(assert) {
-  const controller = this.subject();
+  test('it can import a .graphql file', function(assert) {
+    const controller = this.owner.lookup('controller:graphql-controller');
 
-  assert.ok(controller.get('query'));
+    assert.ok(controller.get('query'));
+  });
 });

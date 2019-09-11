@@ -3,7 +3,7 @@ import Controller from '@ember/controller';
 import query from '../graphql/query';
 
 export default Controller.extend({
-  query: computed(() => {
+  query: computed(function() {
     return query;
   })
 });
