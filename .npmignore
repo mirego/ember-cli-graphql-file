@@ -12,7 +12,7 @@
 /.env*
 /.eslintignore
 /.eslintrc.js
-/.git
+/.git/
 /.gitignore
 /.template-lintrc.js
 /.travis.yml

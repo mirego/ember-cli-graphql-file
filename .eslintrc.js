@@ -82,7 +82,8 @@ module.exports = {
     'space-infix-ops': 2,
     'spaced-comment': 2,
     'strict': 0,
-    'wrap-iife': [2, 'inside']
+    'wrap-iife': [2, 'inside'],
+    'ember/no-jquery': 'error'
   },
   overrides: [
     // node files
