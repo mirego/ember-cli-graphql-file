@@ -23,7 +23,7 @@ matrix:
       name: "Tests"
       script:
         - npm run lint
-        - npm test:all
+        - npm run test:all
 
 install:
   - npm install
